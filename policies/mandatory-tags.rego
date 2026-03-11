@@ -1,6 +1,6 @@
 package terraform.tags
 
-required_tags := {"Environment", "Owner", "CostCenter"}
+required_tags := {"Environment", "Owner", "CostCentre"}
 
 #
 # Deny rule
