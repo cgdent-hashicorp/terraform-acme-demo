@@ -23,7 +23,7 @@ module "vpc" {
 resource "aws_security_group" "allow_ssh_icmp" {
   name        = "allow_ssh_icmp"
   description = "Allow SSH and ICMP from specified CIDRs"
-  vpc_id      = aws_vpc.this.id
+  vpc_id      = module.vpc.vpc_id
 
   ingress {
     description = "Allow SSH"
