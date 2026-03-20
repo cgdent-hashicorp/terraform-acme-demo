@@ -20,6 +20,37 @@ module "vpc" {
   tags       = var.tags
 }
 
+resource "aws_security_group" "allow_ssh_icmp" {
+  name        = "allow_ssh_icmp"
+  description = "Allow SSH and ICMP from specified CIDRs"
+  vpc_id      = aws_default_vpc.aws-default-vpc-us-east-1.id
+
+  ingress {
+    description = "Allow SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] # or restrict to your IPs
+  }
+
+  ingress {
+    description = "Allow ICMP (ping)"
+    from_port   = -1
+    to_port     = -1
+    protocol    = "icmp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags       = var.tags
+}
+
 resource "aws_instance" "web" {
   ami           = var.ami
   instance_type = var.instance_type
