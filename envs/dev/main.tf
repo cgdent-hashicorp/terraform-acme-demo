@@ -55,26 +55,34 @@ resource "aws_instance" "web" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
-  tags          = var.tags
+  tags = merge(var.tags, {
+    Name = "web"
+  })
 }
 
 resource "aws_instance" "ansible1" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
-  tags          = var.tags
+  tags = merge(var.tags, {
+    Name = "ansible1"
+  })
 }
 
 resource "aws_instance" "ansible2" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
-  tags          = var.tags
+  tags = merge(var.tags, {
+    Name = "ansible2"
+  })
 }
 
 resource "aws_instance" "ansible3" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
-  tags          = var.tags
+  tags = merge(var.tags, {
+    Name = "ansible3"
+  })
 }
