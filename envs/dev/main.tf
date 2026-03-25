@@ -57,3 +57,24 @@ resource "aws_instance" "web" {
   subnet_id     = module.vpc.public_subnet_id
   tags          = var.tags
 }
+
+resource "aws_instance" "ansible1" {
+  ami           = var.ami
+  instance_type = var.instance_type
+  subnet_id     = module.vpc.public_subnet_id
+  tags          = var.tags
+}
+
+resource "aws_instance" "ansible2" {
+  ami           = var.ami
+  instance_type = var.instance_type
+  subnet_id     = module.vpc.public_subnet_id
+  tags          = var.tags
+}
+
+resource "aws_instance" "ansible3" {
+  ami           = var.ami
+  instance_type = var.instance_type
+  subnet_id     = module.vpc.public_subnet_id
+  tags          = var.tags
+}
