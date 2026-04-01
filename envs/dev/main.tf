@@ -78,7 +78,7 @@ resource "aws_instance" "ansible2" {
   })
 }
 
-resource "aws_instance" "ansible3" {
+resource "aws_instance" "ansible4" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
