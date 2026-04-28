@@ -7,7 +7,7 @@ and GitHub Actions automation for ACME Corp's Cloud 2.0 demo.
 ## Repo structure
 
 - `modules/aws-webapp/` - reusable VPC + webapp module
-- `envs/dev/` - example AWS environment consuming the module
+- `aws/` - example AWS environment consuming the module
 - `azure/` - Azure example (resource group)
 - `policies/` - Sentinel policies
 - `.github/workflows/` - GitHub Actions
