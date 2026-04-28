@@ -51,38 +51,56 @@ resource "aws_security_group" "allow_ssh_icmp" {
   tags       = var.tags
 }
 
-resource "aws_instance" "web" {
+resource "aws_instance" "web1" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
   tags = merge(var.tags, {
-    Name = "web"
+    Name = "web1"
   })
 }
 
-resource "aws_instance" "ansible1" {
+resource "aws_instance" "web2" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
   tags = merge(var.tags, {
-    Name = "ansible1"
+    Name = "web2"
   })
 }
 
-resource "aws_instance" "ansible2" {
+resource "aws_instance" "web3" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
   tags = merge(var.tags, {
-    Name = "ansible2"
+    Name = "web3"
   })
 }
 
-resource "aws_instance" "ansible4" {
+resource "aws_instance" "backend1" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
   tags = merge(var.tags, {
-    Name = "ansible3"
+    Name = "backend1"
+  })
+}
+
+resource "aws_instance" "backend2" {
+  ami           = var.ami
+  instance_type = var.instance_type
+  subnet_id     = module.vpc.public_subnet_id
+  tags = merge(var.tags, {
+    Name = "backend2"
+  })
+}
+
+resource "aws_instance" "backend3" {
+  ami           = var.ami
+  instance_type = var.instance_type
+  subnet_id     = module.vpc.public_subnet_id
+  tags = merge(var.tags, {
+    Name = "backend3"
   })
 }
