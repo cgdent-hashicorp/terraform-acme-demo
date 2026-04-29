@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "../modules/aws-webapp"
+  source = "../modules/aws-networking"
   name   = var.project_name
   vpc_cidr = var.vpc_cidr
   public_subnet_cidr = var.public_subnet_cidr
