@@ -2,9 +2,9 @@
 set -euo pipefail
 
 ORG="acme-corp"
-REPO="https://github.com/cgdent-demo/terraform-cloud-demo"
+REPO="https://github.com/cgdent-hashicorp/terraform-cloud-demo"
 
-AWS_WORKSPACE="acme-webapp-dev"
+AWS_WORKSPACE="acme-aws-demo"
 AZURE_WORKSPACE="acme-azure-demo"
 
 echo "Creating TFC workspace: $AWS_WORKSPACE"
