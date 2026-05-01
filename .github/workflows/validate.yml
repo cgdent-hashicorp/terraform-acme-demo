@@ -3,7 +3,7 @@ name: Terraform Validate
 on:
   pull_request:
     paths:
-      - 'envs/**'
+      - 'aws/**'
       - 'modules/**'
       - '.github/**'
 
@@ -16,7 +16,7 @@ jobs:
         uses: hashicorp/setup-terraform@v2
       - name: Validate all environments
         run: |
-          for d in envs/*; do
+          for d in aws/*; do
             if [ -f "$d/main.tf" ]; then
               (cd $d && terraform init -backend=false && terraform validate)
             fi
