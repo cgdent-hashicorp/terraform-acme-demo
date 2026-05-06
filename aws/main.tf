@@ -51,56 +51,56 @@ resource "aws_security_group" "allow_ssh_icmp" {
   tags       = var.tags
 }
 
-resource "aws_instance" "web1" {
+resource "aws_instance" "web-server-01" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
   tags = merge(var.tags, {
-    Name = "web1"
+    Name = "web-server-01"
   })
 }
 
-resource "aws_instance" "web2" {
+resource "aws_instance" "web-server-02" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
   tags = merge(var.tags, {
-    Name = "web2"
+    Name = "web-server-02"
   })
 }
 
-resource "aws_instance" "web3" {
+resource "aws_instance" "web-server-03" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
   tags = merge(var.tags, {
-    Name = "web3"
+    Name = "web-server-03"
   })
 }
 
-resource "aws_instance" "backend1" {
+resource "aws_instance" "backend-01" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
   tags = merge(var.tags, {
-    Name = "backend1"
+    Name = "backend-01"
   })
 }
 
-resource "aws_instance" "backend2" {
+resource "aws_instance" "backend-02" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
   tags = merge(var.tags, {
-    Name = "backend2"
+    Name = "backend-02"
   })
 }
 
-resource "aws_instance" "backend3" {
+resource "aws_instance" "backend-03" {
   ami           = var.ami
   instance_type = var.instance_type
   subnet_id     = module.vpc.public_subnet_id
   tags = merge(var.tags, {
-    Name = "backend3"
+    Name = "backend-03"
   })
 }
