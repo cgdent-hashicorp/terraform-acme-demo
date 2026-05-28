@@ -13,11 +13,12 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "../modules/aws-networking"
-  name   = var.project_name
-  vpc_cidr = var.vpc_cidr
+  source = "git::https://github.com/cgdent-hashicorp/terraform-aws-networking.git?ref=v1.0.0"
+
+  name               = var.project_name
+  vpc_cidr           = var.vpc_cidr
   public_subnet_cidr = var.public_subnet_cidr
-  tags       = var.tags
+  tags               = var.tags
 }
 
 resource "aws_security_group" "allow_ssh_icmp" {
