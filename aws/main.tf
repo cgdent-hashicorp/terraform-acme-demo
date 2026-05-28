@@ -14,7 +14,7 @@ provider "aws" {
 
 module "vpc" {
   source  = "app.terraform.io/cgdent-ibm/vpc/aws"
-  version = "1.0.0"
+  version = "1.0.1"
 
   name               = var.project_name
   vpc_cidr           = var.vpc_cidr
