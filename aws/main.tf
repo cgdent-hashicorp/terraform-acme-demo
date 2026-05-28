@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "git::https://github.com/cgdent-hashicorp/terraform-aws-networking.git?ref=v1.0.0"
+  source = "git::https://github.com/cgdent-hashicorp/terraform-aws-vpc-module.git?ref=v1.0.0"
 
   name               = var.project_name
   vpc_cidr           = var.vpc_cidr
