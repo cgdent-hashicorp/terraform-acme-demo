@@ -9,7 +9,7 @@ and GitHub Actions automation for ACME Corp's Cloud 2.0 demo.
 - `modules/aws-webapp/` - reusable VPC + webapp module
 - `aws/` - example AWS environment consuming the module
 - `azure/` - Azure example (resource group)
-- `policies/` - Sentinel policies
+- `policies/` - Sentinel and OPA policies
 - `.github/workflows/` - GitHub Actions
 - `scripts/` - helper scripts (TFC bootstrap)
 
