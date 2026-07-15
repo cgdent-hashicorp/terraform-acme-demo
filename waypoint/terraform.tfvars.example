@@ -1,0 +1,8 @@
+# Copy to terraform.tfvars and fill in. Keep aws_access_key_id /
+# aws_secret_access_key out of this file — pass them as
+# TF_VAR_aws_access_key_id / TF_VAR_aws_secret_access_key env vars instead.
+
+# tfc_organization defaults to "cgdent-ibm" (the org that owns
+# app.terraform.io/cgdent-ibm/vpc/aws) — override only if that changes.
+tfc_team_name = "owners"
+aws_region    = "us-east-1"
